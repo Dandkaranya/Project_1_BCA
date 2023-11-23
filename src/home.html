@@ -10,6 +10,9 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -32,8 +35,20 @@
       color: #333;
     }
 
+    main {
+      display: flex;
+      flex: 1;
+    }
+
     section {
+      flex: 7; /* 70% */
       padding: 20px;
+    }
+
+    aside {
+      flex: 3; /* 30% */
+      padding: 5px;
+      background-color: #f4f4f4;
     }
 
     footer {
@@ -41,8 +56,6 @@
       color: #fff;
       text-align: center;
       padding: 10px;
-      position: absolute;
-      bottom: 0;
       width: 100%;
     }
   </style>
@@ -60,25 +73,29 @@
     <a href="#">Comedy</a>
   </nav>
 
-  <section>
-    <h2>Welcome to Our Website!</h2>
-    <p>This is a basic homepage template. You can customize and add more content here.</p>
-  </section>
+  <main>
+    <section>
+      <div>
+        <h2>Additional Information</h2>
+        <p>Explore our latest releases and exclusive content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
 
-  <section>
-    <h2>Action</h2>
-    <p>Explore the thrilling world of action-packed adventures and excitement. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </section>
+      <div>
+        <h2>Additional Information</h2>
+        <p>Explore our latest releases and exclusive content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>Drama</h2>
-    <p>Immerse yourself in gripping stories and emotional narratives. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </section>
+    <aside>
+      <h2>Additional Information</h2>
+      <p>Explore our latest releases and exclusive content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </aside>
 
-  <section>
-    <h2>Comedy</h2>
-    <p>Laugh out loud with our collection of hilarious and entertaining content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </section>
+    <aside>
+      <h2>Connect with Us</h2>
+      <p>Follow us on social media for updates and behind-the-scenes content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </aside>
+  </main>
 
   <footer>
     <p>&copy; 2023 Your Website. All rights reserved.</p>
