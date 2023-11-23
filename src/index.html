@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling for the layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .movie-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .movie {
+            margin-bottom: 1rem;
+        }
+
+        /* Add more styles as needed */
+
+        footer {
+            background-color: #000000;
+            color: #808080;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Netflix Clone</div>
+        <!-- Add any navigation elements here -->
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Hero section with background image and featured content -->
+            <div class="hero-content">
+                <h1>Watch Anytime, Anywhere.</h1>
+                <p>Stream unlimited movies and TV shows on your device.</p>
+                <!-- Add a call-to-action button -->
+            </div>
+        </section>
+
+        <section class="movie-list">
+            <!-- Display a list of movies or TV shows -->
+            <!-- Each movie or show can be a clickable item leading to its details -->
+            <div class="movie">
+                <img src="movie1.jpg" alt="Movie 1">
+                <h3>Movie 1</h3>
+            </div>
+
+            <div class="movie">
+                <img src="movie2.jpg" alt="Movie 2">
+                <h3>Movie 2</h3>
+            </div>
+
+            <!-- Add more movies or shows as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Add footer content, links, etc. -->
+        <p>&copy; 2023 Netflix Clone</p>
+    </footer>
+</body>
+</html>
