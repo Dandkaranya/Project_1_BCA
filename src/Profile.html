@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .Playsists{
+ display: flex;
+  justify-content: center;
+}
+.Artists{
+     display: flex;
+  justify-content: center;
+}
+.Following{
+  display: flex;
+  justify-content: center;
+}
+.ccard {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-right: 16px;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ccard img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.ccard h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ccard p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+
+.bcard {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-right: 16px;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bcard img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.bcard h3 {
+  margin-top: 10px;
+}
+
+.bcard p {
+  margin: 5px 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: rgb(110, 155, 168);
+    grid-gap: 10px;
+    height: 1000px;
+    width: 1500px;
+}
+
+.item1 {
+    background-color: rgb(147, 191, 199);
+    grid-area: 1/1/7/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.item3 {
+    background-color: rgb(147, 191, 199);
+    grid-area: 1/2/3/7;
+    overflow-y: auto;
+    padding: 80px;
+}
+
+.item3 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.item3 h1 {
+  text-align: center;
+
+}
+.item2 {
+    background-color: #93bfc7;
+    grid-area: 3/2/7/7;
+    overflow-y: auto;
+    padding: 80px;
+}
+
+
+.card {
+  background-color: #93bfc7;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.card-content {
+
+            font-family: 'Roboto', sans-serif; /* Apply the Google Font 'Roboto' to the 'Profile' name */
+            font-size: 24px; /* Adjust the font size as desired */
+            font-weight: bold; /* Apply bold style to the 'Profile' name */
+            margin: 0;
+}
+
+.card-content h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-content p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.Tracks table {
+  width: 100%;
+}
+
+.Tracks th,
+.Tracks td {
+  padding: 10px;
+  text-align: center;
+
+  width: 80px;
+}
+th span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+th span img {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">
+1
+        </div>
+        <div class="item2">
+            <h1>Tracks</h1>
+<div class="Tracks">
+    <table>
+        <thead>
+            <tr>
+                <th>Song Name</th>
+                <th>Album Name</th>
+                <th>Song Length</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>
+                <span><img src="./user2.jpg" alt="Song Name Image">Song Name</span>
+            </th>
+            <th>Album Name</th>
+            <th>Song Length</th>
+        </tr>
+
+            <tr>
+        <th>
+            <span><img src="./user2.jpg" alt="Song Name Image">Song Name</span>
+        </th>
+                <td>Album Name 2</td>
+                <td>Song Length 2</td>
+            </tr>
+            <!-- Repeat the above row structure for additional songs -->
+        </tbody>
+    </table>
+</div>
+            <h1>Playlists</h1>
+            
+            <div class="Playsists">
+                
+                 <div class="bcard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                </div>
+                <div class="bcard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                </div>
+                <div class="bcard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                </div>
+                 <div class="bcard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                </div>
+                <div class="bcard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                </div>
+            </div>
+            <br>
+            <a href="playlists.html">Show More</a>
+            
+            <h1>Artists</h1>
+          
+             <div class="Artists">
+                 <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                 <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+            </div>    
+              <a href="artists.html">Show More</a>
+
+            <h1>Following</h1>
+            
+              <div class="Following">
+                 <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                 <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+                <div class="ccard">
+                    <img src="./Fujii Kaze.jpeg"alt="Image Description">
+                    <h3>Song Title</h3>
+                    <p>Artist Name</p>
+                </div>
+            </div>
+            <a href="following.html">Show More</a>
+        </div>
+        <div class="item3">
+            <div class="card">
+                <img src="./Fujii Kaze.jpeg" alt="Card Image">
+                <br><br><br>
+                <div class="card-content">
+                    <p>Profile</p>
+                    <h1>Card Title</h1>
+               
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
