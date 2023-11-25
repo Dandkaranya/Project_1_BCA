@@ -1,0 +1,99 @@
+   .Playlists {
+       display: grid;
+       grid-template-columns: repeat(6, 1fr);
+       grid-gap: 5px;
+       justify-items: center;
+       align-items: center;
+   }
+
+   .bcard {
+       background-color: #001b75;
+       border-radius: 8px;
+       width: 200px;
+       height: 250px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       row-gap: 5px;
+       column-gap: 5px;
+       position: relative;
+       overflow: hidden;
+   }
+
+   .bcard img {
+       width: 200px;
+       height: 200px;
+       object-fit: cover;
+       margin-bottom: 16px;
+       transition: transform 0.3s;
+   }
+
+   .bcard:hover img {
+       transform: scale(1.1);
+   }
+
+   .bcard .popup {
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background-color: rgba(0, 0, 0, 0.8);
+       color: #ff0000;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       opacity: 0;
+       transition: opacity 0.3s;
+   }
+
+   .bcard:hover .popup {
+       opacity: 1;
+   }
+
+   .bcard h3,
+   .bcard p {
+       margin: 0;
+   }
+
+   .bcard h3 {
+       font-size: 18px;
+       color: #000000;
+   }
+
+   .bcard p {
+       font-size: 14px;
+       color: #000000;
+   }
+
+   .bcard .popup .play-button {
+       width: 60px;
+       height: 60px;
+       background-color: #000000;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-bottom: 10px;
+       position: relative;
+       border-radius: 50%;
+   }
+
+   .bcard .popup .play-button i {
+       font-size: 36px;
+       color: #ffffff;
+   }
+
+   .bcard .popup .play-button:after {
+       content: "";
+       position: absolute;
+       top: calc(50% - 10px);
+       left: calc(50% - 9px);
+       width: 0;
+       height: 0;
+       border-style: solid;
+       border-width: 10px 0 10px 18px;
+       border-color: transparent transparent transparent #000000;
+   }

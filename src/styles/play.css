@@ -1,0 +1,41 @@
+        .Playlists {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5px;
+            /* Adjust the grid-gap value as per your preference */
+            justify-items: center;
+            align-items: center;
+        }
+
+        .bcard {
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            width: 200px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            row-gap: 5px;
+            column-gap: 5px;
+        }
+
+        .bcard img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+
+        .bcard h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #000000;
+        }
+
+        .bcard p {
+            margin: 0;
+            font-size: 14px;
+            color: #000000;
+        }
