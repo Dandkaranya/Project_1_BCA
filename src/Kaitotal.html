@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav img {
+            width: 120px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .bcard {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .bcard img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .popup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .bcard:hover .popup {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .play-button {
+            margin-bottom: 10px;
+        }
+
+        .play-button i {
+            font-size: 36px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .popup a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .popup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bcard">
+        <img src="./images/juju.jpeg" alt="Image Description" />
+        <h3>Anime</h3>
+        <div class="popup">
+            <div class="play-button">
+                <i class="material-icons">play_arrow</i>
+            </div>
+            <h3>Anime</h3>
+            <a href="../Wikis/Jujutsu_Kaisen_wiki.html">Know more</a>
+            <a href="#" onclick="redirectToAnimeSite()">Watch here</a>
+            <a href="">Download here</a>
+        </div>
+    </div>
+
+    <script>
+        function redirectToAnimeSite() {
+            // Change the URL to the anime site featuring Jujutsu Kaisen
+            window.location.href = "https://9anime.pe/watch/jujutsu-kaisen-tv-534?ep=10789";
+        }
+                function downloadAnime() {
+                    window.location.href = "https://web.telegram.org/a/#-1001390037914";
+        }
+        
+    </script>
+
+</body>
+
+</html>

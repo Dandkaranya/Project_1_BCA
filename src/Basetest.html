@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Streaming Site</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="./styles/play.css" />
+    <link rel="stylesheet" href="./styles/se.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .swiper-slide {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            /* Adjust the height as desired */
+        }
+
+        .swiper-slide::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav img {
+            width: 120px;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .slick-slider {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .slick-slide {
+            margin: 0 10px;
+        }
+
+        .video-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .video-item:hover {
+            transform: scale(1.05);
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust the height as needed */
+            overflow: hidden;
+        }
+
+        .banner video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .video-item h3 {
+            margin: 10px 0;
+            padding: 0 10px;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust the height as needed */
+            overflow: hidden;
+        }
+
+        .banner video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner .content-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 100%;
+            backdrop-filter: blur(30px);
+            /* Adjust the blur radius as needed */
+        }
+
+        .banner .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .swiper-slide-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .swiper-slide img {
+            display: none;
+            height: 50%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Site Logo" />
+            <ul>
+                <li>
+                    <a href="index.html"><i class="material-icons">home</i> Home</a>
+                </li>
+                <li>
+                    <a href="tvshows.html"><i class="material-icons">tv</i> TV Shows</a>
+                </li>
+                <li>
+                    <a href="movies.html"><i class="material-icons">movie</i> Movies</a>
+                </li>
+                <li>
+                    <a href="mylist.html"><i class="material-icons">list</i> My List</a>
+                </li>
+                <li>
+                    <a href="genres.html"><i class="material-icons">category</i> Genres</a>
+                </li>
+                <li>
+                    <a href="favorites.html"><i class="material-icons">favorite</i> Favorites</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="Lafa">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('./images/aot.jpeg');">
+                        <div class="swiper-slide-content">
+                            <h3>Card 1</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Nullam at leo sed mi commodo varius nec sed mauris.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('./images/fufi.jpeg');">
+                        <div class="swiper-slide-content">
+                            <h3>Card 2</h3>
+                            <p>
+                                Integer maximus orci vel diam rutrum, et tempus purus
+                                ultrices. Vestibulum ante ipsum primis in faucibus orci luctus
+                                et ultrices posuere cubilia curae.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('./images/goku.jpeg');">
+                        <div class="swiper-slide-content">
+                            <h3>Card 3</h3>
+                            <p>
+                                Quisque laoreet est nisl, a ultricies urna congue vitae. Nulla
+                                facilisi. Sed vitae dignissim tortor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+   
+
+
+
+
+
+        <div class="Japanese">
+            <h1>Japanese</h1>
+            <div class="slick-slider">
+                <div class="video-item">
+                    <video controls>
+                        <source src="video1.mp4" type="video/mp4" />
+                    </video>
+                    <h3>Video 1 Title</h3>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="video2.mp4" type="video/mp4" />
+                    </video>
+                    <h3>Video 2 Title</h3>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="video3.mp4" type="video/mp4" />
+                    </video>
+                    <h3>Video 3 Title</h3>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="video4.mp4" type="video/mp4" />
+                    </video>
+                    <h3>Video 4 Title</h3>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="video5.mp4" type="video/mp4" />
+                    </video>
+                    <h3>Video 5 Title</h3>
+                </div>
+            </div>
+        
+        </div>
+        
+        </div>
+
+        <div class="Playlists">
+            <div class="bcard">
+                <img src="./images/poster_onePiece.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/One_piece_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_jujutsuKaisen.jpeg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Jujutsu_Kaisen_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_bleach.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Bleach_wiki.html">Know more</a>
+                    
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_dragonBall.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Dragon_ball_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_naruto.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Naruto_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_DrStone.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/DrStone_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_baki.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Baki_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_demonSlayer.jpg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="../Wikis/Jujutsu_Kaisen_wiki.htmliki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+        
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_jujutsuKaisen.jpeg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Jujutsu_Kaisen_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_jujutsuKaisen.jpeg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Jujutsu_Kaisen_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_jujutsuKaisen.jpeg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Jujutsu_Kaisen_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+            <div class="bcard">
+                <img src="./images/poster_jujutsuKaisen.jpeg" alt="Image Description" />
+                <h3>Anime</h3>
+                <div class="popup">
+                    <div class="play-button">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <h3>Anime</h3>
+                    <a href="./Wikis/Jujutsu_Kaisen_wiki.html">Know more</a>
+                    <a href="">Watch here</a>
+                    <a href="">Dowload here</a>
+                </div>
+            </div>
+        </div>
+
+            
+            
+
+            
+
+           
+
+           
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./abc.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $(".slick-slider").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+          
+                </script>
+
+
+</body>
+
+</html>
