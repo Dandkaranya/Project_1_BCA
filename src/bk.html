@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Wiki</title>
+    <style>
+        /* Your global styles can go here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Additional styles specific to your content can be added as needed */
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            grid-column: 1 / span 2;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .story {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .story img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .listing {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .box {
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .listing a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .listing a:hover {
+            color: #007BFF;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        aside {
+            background-color: #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .poster-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+
+        .poster {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .poster:hover {
+            transform: scale(1.1);
+        }
+
+        .poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="story">
+        <img src="/src/images/banner.jpg" alt="Image">
+        <div class="caption">
+            This is a caption for the story.
+        </div>
+    </div>
+    <main>
+        <section>
+            <div class="search-bar">
+                <label for="search">Search:</label>
+                <input type="text" id="search" name="search" placeholder="Enter keyword...">
+                <button onclick="search()">Go</button>
+            </div>
+            <div class="listing">
+                <ul>
+                    <li>
+                        <div id="bleach" class="box">
+                            <a href="./Bleach_wiki.html">Bleach</a>
+                            <!-- Content specific to Bleach -->
+                        </div>
+                    </li>
+                    <!-- Add more entries as needed -->
+                </ul>
+            </div>
+        </section>
+        <aside>
+            <h2>Posters of Anime</h2>
+            <div class="poster-section">
+                <div class="poster">
+                    <img src="path_to_poster_image1.jpg" alt="Anime Poster 1">
+                </div>
+                <div class="poster">
+                    <img src="path_to_poster_image2.jpg" alt="Anime Poster 2">
+                </div>
+                <!-- Add more posters as needed -->
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Master Wiki. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

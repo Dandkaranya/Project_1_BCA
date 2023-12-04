@@ -59,6 +59,68 @@
             color: #fff;
             font-size: 14px;
         }
+              body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Additional styles specific to your content can be added as needed */
+        main {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+
+        aside {
+            flex: 1;
+            padding: 20px;
+            background-color: #ddd;
+        }
+
+        section {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .listing {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .box {
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .listing a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .listing a:hover {
+            color: #007BFF;
+        } .search-bar {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
@@ -70,17 +132,160 @@
     </div>
 </div>
     <main>
-        <aside>
-            <!-- Index section goes here -->
-            <h2>Index</h2>
+    
+            <div class="search-bar">
+                <label for="search">Search:</label>
+                <input type="text" id="search" name="search" placeholder="Enter keyword...">
+                <button onclick="search()">Go</button>
+            </div>
+            <aside>
+          <section>
+           <div class="listing">
             <ul>
-                <li><a href="./Bleach_wiki.html">Bleach</a></li>
-                <li><a href="./One_piece_wiki.html">One Piece</a></li>
-                <li><a href="./Naruto_wiki.html">Naruto</a></li>
-                <li><a href="./Jujutsu_Kaisen_wiki.html">Jujutsu Kaisen</a></li>
-                <!-- Add more entries as needed -->
+            <li>
+                <div id="bleach" class="box">
+                    <a href="./Bleach_wiki.html">Bleach</a>
+                    <!-- Content specific to Bleach -->
+                </div>
+            </li>
+            
+            <li>
+                <div id="one_piece" class="box">
+                    <a href="./One_piece_wiki.html">One Piece</a>
+                    <!-- Content specific to One Piece -->
+                </div>
+            </li>
+            
+            <li>
+                <div id="naruto" class="box">
+                    <a href="./Naruto_wiki.html">Naruto</a>
+                    <!-- Content specific to Naruto -->
+                </div>
+            </li>
+            
+            <li>
+                <div id="jujutsu_kaisen" class="box">
+                    <a href="./Jujutsu_Kaisen_wiki.html">Jujutsu Kaisen</a>
+                    <!-- Content specific to Jujutsu Kaisen -->
+                </div>
+            </li>
+            <div id="fullmetal_alchemist" class="box">
+                <a href="./fullmetal_alchemist.html">Fullmetal Alchemist: Brotherhood</a>
+                <!-- Content specific to Fullmetal Alchemist: Brotherhood -->
+            </div>
+            </li>
+            <li>
+                <div id="death_note" class="box">
+                    <a href="./death_note.html">Death Note</a>
+                    <!-- Content specific to Death Note -->
+                </div>
+            </li>
+            <li>
+                <div id="my_hero_academia" class="box">
+                    <a href="./my_hero_academia.html">My Hero Academia</a>
+                    <!-- Content specific to My Hero Academia -->
+                </div>
+            </li>
+            <li>
+                <div id="one_punch_man" class="box">
+                    <a href="./one_punch_man.html">One Punch Man</a>
+                    <!-- Content specific to One Punch Man -->
+                </div>
+            </li>
+            <li>
+                <div id="cowboy_bebop" class="box">
+                    <a href="./cowboy_bebop.html">Cowboy Bebop</a>
+                    <!-- Content specific to Cowboy Bebop -->
+                </div>
+            </li>
+            <li>
+                <div id="neon_genesis_evangelion" class="box">
+                    <a href="./neon_genesis_evangelion.html">Neon Genesis Evangelion</a>
+                    <!-- Content specific to Neon Genesis Evangelion -->
+                </div>
+            </li>
+            <li>
+                <div id="demon_slayer" class="box">
+                    <a href="./demon_slayer.html">Demon Slayer: Kimetsu no Yaiba</a>
+                    <!-- Content specific to Demon Slayer: Kimetsu no Yaiba -->
+                </div>
+            </li>
+            <li>
+                <div id="steins_gate" class="box">
+                    <a href="./steins_gate.html">Steins;Gate</a>
+                    <!-- Content specific to Steins;Gate -->
+                </div>
+            </li>
+            <li>
+                <div id="code_geass" class="box">
+                    <a href="./code_geass.html">Code Geass: Lelouch of the Rebellion</a>
+                    <!-- Content specific to Code Geass: Lelouch of the Rebellion -->
+                </div>
+            </li>
+            <li>
+                <div id="hunter_x_hunter" class="box">
+                    <a href="./hunter_x_hunter.html">Hunter x Hunter</a>
+                    <!-- Content specific to Hunter x Hunter -->
+                </div>
+            </li>
+            <li>
+                <div id="naruto_anime" class="box">
+                    <a href="./naruto_anime.html">Naruto</a>
+                    <!-- Content specific to Naruto -->
+                </div>
+            </li>
+            <li>
+                <div id="sword_art_online" class="box">
+                    <a href="./sword_art_online.html">Sword Art Online</a>
+                    <!-- Content specific to Sword Art Online -->
+                </div>
+            </li>
+            <li>
+                <div id="dragon_ball_z" class="box">
+                    <a href="./dragon_ball_z.html">Dragon Ball Z</a>
+                    <!-- Content specific to Dragon Ball Z -->
+                </div>
+            </li>
+            <li>
+                <div id="your_lie_in_april" class="box">
+                    <a href="./your_lie_in_april.html">Your Lie in April</a>
+                    <!-- Content specific to Your Lie in April -->
+                </div>
+            </li>
+            <li>
+                <div id="tokyo_ghoul" class="box">
+                    <a href="./tokyo_ghoul.html">Tokyo Ghoul</a>
+                    <!-- Content specific to Tokyo Ghoul -->
+                </div>
+            </li>
+            <li>
+                <div id="spirited_away" class="box">
+                    <a href="./spirited_away.html">Spirited Away</a>
+                    <!-- Content specific to Spirited Away -->
+                </div>
+            </li>
+            <li>
+                <div id="haikyuu" class="box">
+                    <a href="./haikyuu.html">Haikyuu!!</a>
+                    <!-- Content specific to Haikyuu!! -->
+                </div>
+            </li>
+            <li>
+                <div id="violet_evergarden" class="box">
+                    <a href="./violet_evergarden.html">Violet Evergarden</a>
+                    <!-- Content specific to Violet Evergarden -->
+                </div>
+            </li>
+            <li>
+                <div id="one_piece_anime" class="box">
+                    <a href="./one_piece_anime.html">One Piece</a>
+                    <!-- Content specific to One Piece -->
+                </div>
+            </li>
             </ul>
-        </aside>
+           </div>
+</section>
+</aside>
     </main>
 
     <footer>
